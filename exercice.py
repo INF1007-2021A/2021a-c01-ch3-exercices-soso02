@@ -1,41 +1,52 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-
 import math
-
 def square_root(a: float) -> float:
-    return 0.0
-
+    racine_carre=math.sqrt(a)
+    return racine_carre
 
 def square(a: float) -> float:
-    return 0.0
+    carre=a**2
+    return carre
 
 
 def average(a: float, b: float, c: float) -> float:
-    return 0.0
+    moyenne=(a+b+c)/3
+    return moyenne
 
 
 def to_radians(angle_degs: float, angle_mins: float, angle_secs: float) -> float:
-    return 0.0
+    angle_total=angle_degs+angle_mins/60+angle_secs/3600
+    return math.radians(angle_total)
 
 
 def to_degrees(angle_rads: float) -> tuple:
-    return 0.0, 0.0, 0.0
+    degres=math.degrees(angle_rads)
+    Dfin=int(degres)
+    restant=degres-int(degres)
+    Mfin=int(restant*60)
+    restant=(restant*60)-Mfin
+    Sfin=int(restant*60)
+
+    return Dfin, Mfin, Sfin
 
 
 def to_celsius(temperature: float) -> float:
-    return 0.0
+    celsius=(temperature-32)/1.8
+    return celsius
 
 
 def to_farenheit(temperature: float) -> float:
-    return 0.0
+    farenheit=(temperature*1.8)+32
+    return farenheit
 
 
 def main() -> None:
-    print(f"La racine carré de 144 est : {square_root(144)}")
 
+    print(f"La racine carré de 144 est : {square_root(144)}")
     print(f"Le carré de 12 est : {square(12)}")
+
 
     print(f"Moyenne des nombres 2, 4, 6: {average(2, 4, 6)}")
 
